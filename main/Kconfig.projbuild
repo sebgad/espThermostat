@@ -1,0 +1,44 @@
+
+menu "Equiva Thermostat settings"
+    config ESP_EQUIVA_DEV_NAME
+        string "Thermostat name"
+        default "Thermostat"
+        help
+            Please choose a device name for the MQTT connection
+
+    config ESP_EQUIVA_N_GPIO_ENC_1
+        int "GPIO Encoder PIN 1"
+        default 4
+        help
+            GPIO Number for the encoder signal 1
+
+    config ESP_EQUIVA_N_GPIO_ENC_2
+        int "GPIO Encoder PIN 2"
+        default 5
+        help
+            GPIO Number for the encoder signal 2
+
+    config ESP_EQUIVA_N_GPIO_SLEEP
+        int "GPIO for deep sleep"
+        default 16
+        help
+            GPIO Number for deep sleep wakeup
+
+    config ESP_EQUIVA_MQTT_BROKER_ADDR
+        string  "MQTT Broker address"
+        default "Empty"
+        help
+            Define MQTT broker address including port, e.g. scheme://hostname:port/path
+
+    config ESP_EQUIVA_MQTT_USERNAME
+        string  "MQTT Username"
+        default "Empty"
+        help
+            Define Username of MQTT client
+
+    config ESP_EQUIVA_MQTT_PASSWORD
+        string  "MQTT Password"
+        default "Empty"
+        help
+            Define Password of MQTT client
+endmenu
